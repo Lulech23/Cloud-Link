@@ -6,6 +6,8 @@ It amazes me how many inconveniences can be solved with symbolic links. Equally 
 If that includes you, fear not. All you need to know is that you can move your files wherever you want *without your PC even knowing the difference*. Want to keep programs on your C drive, but you're running low on space? Symlink big files to another hard drive. Want to synchronize game save files across devices? Symlink them to the cloud. Yep, it's pretty handy.
 
 # About
+> *Store any files anywhere and sync with anything. Your apps won't know the difference. Just the way it should be.*
+
 I've written a lot of scripts over the years for managing symbolic links of different kinds for different purposes, but I find that a few common reasons for all of them emerge:
 
 * Cloud storage for backups
