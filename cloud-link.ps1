@@ -82,6 +82,9 @@ if ($TargetTask -eq 1) {
     Write-Host "`nChoose a local folder to upload..." -ForegroundColor Yellow
     $SourcePath = Get-Folder("Select local folder to upload")
 
+    <# Cancel operation if user declines #>
+    $TargetTask = 4
+
     <# If source folder is selected... #>
     if ($SourcePath -ne "CANCEL") {
         Write-Host "[Enter Selection]: `"$SourcePath`""
@@ -116,17 +119,8 @@ if ($TargetTask -eq 1) {
 
                 <# End operation successfully #>
                 $TargetTask = 5
-            } else {
-                <# Otherwise, cancel operation #>
-                $TargetTask = 4
             }
-        } else {
-            <# Otherwise, cancel operation #>
-            $TargetTask = 4
         }
-    } else {
-        <# Otherwise, cancel operation #>
-        $TargetTask = 4
     }
 }
 
@@ -136,6 +130,9 @@ if ($TargetTask -eq 2) {
     <# Get source folder #>
     Write-Host "`nChoose a cloud folder to connect..." -ForegroundColor Yellow
     $SourcePath = Get-Folder("Select cloud folder to connect")
+
+    <# Cancel operation if user declines #>
+    $TargetTask = 4
 
     <# If source folder is selected... #>
     if ($SourcePath -ne "CANCEL") {
@@ -168,17 +165,8 @@ if ($TargetTask -eq 2) {
 
                 <# End operation successfully #>
                 $TargetTask = 5
-            } else {
-                <# Otherwise, cancel operation #>
-                $TargetTask = 4
             }
-        } else {
-            <# Otherwise, cancel operation #>
-            $TargetTask = 4
         }
-    } else {
-        <# Otherwise, cancel operation #>
-        $TargetTask = 4
     }
 }
 
@@ -187,6 +175,9 @@ if ($TargetTask -eq 3) {
     <# Get source folder #>
     Write-Host "`nChoose a local linked folder to disconnect..." -ForegroundColor Yellow
     $SourcePath = Get-Folder("Select local folder to disconnect")
+
+    <# Cancel operation if user declines #>
+    $TargetTask = 4
 
     <# If source folder is selected... #>
     if ($SourcePath -ne "CANCEL") {
@@ -222,18 +213,11 @@ if ($TargetTask -eq 3) {
 
                 <# End operation successfully #>
                 $TargetTask = 5
-            } else {
-                <# Otherwise, cancel operation #>
-                $TargetTask = 4
             }
         } else {
             <# Otherwise, cancel operation #>
             Write-Host "`nError: Selected folder is not linked. Nothing to do here." -ForegroundColor Red
-            $TargetTask = 4
         }
-    } else {
-        <# Otherwise, cancel operation #>
-        $TargetTask = 4
     }
 }
 
