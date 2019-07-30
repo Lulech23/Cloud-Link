@@ -12,21 +12,27 @@ $UserIsAdmin = ([Security.Principal.WindowsPrincipal] `
 
 <# Initialize folder selector #>
 function Get-Folder($WindowDescription) {
+    <# Initialize form #>
     [System.Reflection.Assembly]::LoadWithPartialName("System.windows.forms") | Out-Null
-
     $FolderName = New-Object System.Windows.Forms.FolderBrowserDialog
 
+    <# Set form properties #>
+    $FolderName.Description = $WindowDescription
+    $FolderName.SelectedPath = $Env:APPDATA
+
+    <# Show form on top of other windows #>
     $OnTop = New-Object System.Windows.Forms.Form
     $OnTop.TopMost = $true
 
-    $FolderName.Description = $WindowDescription
-    $FolderName.SelectedPath = $Env:DESKTOP
-
+    <# Get folder from selection form #>
     if ($FolderName.ShowDialog($OnTop) -eq "OK") {
         $Folder += $FolderName.SelectedPath
     } else {
+        <# Otherwise return 'cancel' if no folder was selected #>
         $Folder = "CANCEL"
     }
+
+    <# Return selected folder #>
     return $Folder
 }
 
