@@ -1,7 +1,7 @@
 # cloud-link
 **A PowerShell script for quick-and-easy symlinking local folders to cloud drives (or anywhere else).**
 
-It amazes me how many inconveniences can be solved with symbolic links. Equally as amazing is how under-utilized they are in Windows despite being a part of the OS since Windows 2000. Many people still don't even realize they exist!
+It amazes me how many inconveniences can be solved with symbolic links. Equally as amazing is how under-utilized they are in Windows despite being a part of the OS for 20 years. Many people still don't even realize they exist!
 
 If that includes you, fear not. All you need to know is that you can move your files wherever you want *without your PC even knowing the difference*. Want to keep programs on your C drive, but you're running low on space? Symlink big files to another hard drive. Want to synchronize game save files across devices? Symlink them to the cloud. Yep, it's pretty handy.
 
@@ -23,7 +23,13 @@ But the real charm of Cloud Link is that it uses "reverse symlinking". That is, 
 Of course, if you ever decide symlinking isn't for you, Cloud Link can also **non-destructively** disconnect any links it creates. If you've sync'd data to other devices through a cloud drive, those files stay in the cloud and continue syncing to other devices.
 
 # How-to:
-**[Download cloud-link.ps1](https://github.com/Lulech23/cloud-link/raw/master/cloud-link.ps1)** *(Right-click, Save As...)* 
+If you've never run a PowerShell script before, you'll first need to enable running scripts (you only need to do this once). Run PowerShell as Administrator and paste the following command:
+
+`Set-ExecutionPolicy RemoteSigned`
+
+If all goes well, no messages will appear after setting the execution policy. No news is good news, as they say.
+
+Next, **[Download cloud-link.ps1](https://github.com/Lulech23/cloud-link/raw/master/cloud-link.ps1)** *(Right-click, Save As...)* 
 
 Save it anywhere you like and run it.
 
