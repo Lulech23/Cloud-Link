@@ -29,7 +29,7 @@ If you've never run a PowerShell script before, you'll first need to enable runn
 
 If all goes well, no messages will appear after setting the execution policy. No news is good news, as they say.
 
-Next, **[Download cloud-link.ps1](https://github.com/Lulech23/cloud-link/raw/master/cloud-link.ps1)** *(Right-click, Save As...)* 
+Next, **[download cloud-link.ps1](https://github.com/Lulech23/cloud-link/raw/master/cloud-link.ps1)** *(Right-click, Save As...)* 
 
 Save it anywhere you like and run it.
 
